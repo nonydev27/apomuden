@@ -349,9 +349,9 @@
 
 /* Each landing block fills one viewport; tall sections may grow (no inner trap scroll) */
 .viewport-section {
-  /* min-height: 100svh;
+  min-height: 100svh;
   min-height: 100vh;
-  max-height: 100svh;
+  /* max-height: 100svh;
   max-height: 100vh; */
   box-sizing: border-box;
   scroll-margin-top: 5.75rem;
