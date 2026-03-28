@@ -127,17 +127,7 @@ export function Landing() {
       <section id="top" className="viewport-section hero-section">
         <div className="viewport-section__inner hero-grid">
           <div className="hero-copy">
-            <div className="ai-status-strip">
-              <span className="ai-status-strip__label">Apomuden AI</span>
-              <span className="ai-status-strip__dots" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-              </span>
-              <span className="ai-status-strip__text">
-                Live pipeline · translate → reason → reply
-              </span>
-            </div>
+           
             <p className="landing-eyebrow">
               Apomuden · companion · Made for Ghana & beyond
             </p>
