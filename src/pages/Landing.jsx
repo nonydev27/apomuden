@@ -179,7 +179,7 @@ export function Landing() {
           </ol>
 
           <div id="how-disclaimer" className="how-disclaimer card">
-            <h3 className="how-disclaimer__title brand-font">Disclaimer &amp; safety</h3>
+            <h3 className="how-disclaimer__title brand-font">Disclaimer &amp; Safety</h3>
             <p className="how-disclaimer__lead">
               Apomuden is an educational assistant. It does not replace licensed
               clinicians or emergency services.
