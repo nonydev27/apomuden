@@ -488,8 +488,8 @@
 
 .section-how.viewport-section {
   max-height: none;
-  min-height: 100svh;
-  min-height: 100vh;
+  min-height: 50svh;
+  min-height: 50vh;
   overflow: visible;
   padding-bottom: 1.25rem;
 }
@@ -650,6 +650,7 @@
 
 @media (min-width: 640px) {
   .flow-grid {
+    margin-top: 2rem;
     grid-template-columns: repeat(2, 1fr);
   }
 }

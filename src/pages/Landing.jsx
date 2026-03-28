@@ -211,7 +211,7 @@ export function Landing() {
         className="viewport-section section-block section-lang section-lang--stack"
       >
         <div className="viewport-section__inner section-inner lang-section-body">
-          <h2 className="section-title brand-font">Languages we celebrate</h2>
+          <h2 className="section-title brand-font">Languages We Celebrate</h2>
           <p className="section-intro lang-section-intro">
             Apomuden is designed for Ghanaian voices — Twi, Ga, Adangbe
             (Dangme), Ewe, and neighbours below. Khaya covers many officially;
@@ -241,7 +241,7 @@ export function Landing() {
 
       <section id="care" className="viewport-section section-block section-care">
         <div className="viewport-section__inner section-care-inner card">
-          <h2 className="section-title brand-font">When to seek urgent care</h2>
+          <h2 className="section-title brand-font">When To Seek Urgent Care</h2>
           <p className="section-intro">
             Apomuden cannot see you, test you, or prescribe. Use emergency
             services for breathing trouble, severe chest pain, stroke signs,
