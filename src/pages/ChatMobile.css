@@ -1,0 +1,267 @@
+.app-promo {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 4vw, 2rem) 3.5rem;
+}
+
+.app-promo__intro {
+  text-align: center;
+  max-width: 36rem;
+  margin: 0 auto 2.5rem;
+}
+
+.app-promo__eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--aura-primary);
+}
+
+.app-promo__title {
+  margin: 0 0 0.65rem;
+  font-size: clamp(1.65rem, 3.5vw, 2.25rem);
+  line-height: 1.15;
+  color: var(--aura-accent);
+}
+
+.app-promo__lead {
+  margin: 0 0 1.25rem;
+  color: var(--aura-text-muted);
+  line-height: 1.6;
+  font-size: 1.02rem;
+}
+
+.app-promo__stores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.app-promo__store-badge {
+  display: inline-block;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  opacity: 0.92;
+}
+
+.app-promo__store-badge svg {
+  display: block;
+  height: 44px;
+  width: auto;
+}
+
+.app-promo__store-badge:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+  opacity: 1;
+}
+
+.app-promo__store-badge:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.app-promo__back {
+  margin-top: 0.25rem;
+}
+
+.app-promo__device-wrap {
+  display: grid;
+  gap: 2rem 2.5rem;
+  align-items: start;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 900px) {
+  .app-promo__device-wrap {
+    grid-template-columns: minmax(260px, 320px) 1fr;
+    align-items: center;
+  }
+}
+
+.app-promo__device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+}
+
+.app-promo__mobile-img {
+  width: min(300px, 88vw);
+  border-radius: 2rem;
+  box-shadow:
+    0 32px 64px rgba(33, 74, 68, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+  object-fit: cover;
+  display: block;
+}
+
+.device-frame {
+  width: min(288px, 84vw);
+  border-radius: 2.35rem;
+  padding: 0.55rem 0.55rem 0.65rem;
+  background: linear-gradient(160deg, #1a2e29 0%, #0f1f1c 55%, #0a1815 100%);
+  box-shadow:
+    0 32px 64px rgba(33, 74, 68, 0.28),
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.device-notch {
+  width: 38%;
+  height: 1.35rem;
+  margin: 0 auto 0.35rem;
+  border-radius: 0 0 0.65rem 0.65rem;
+  background: #050c0a;
+}
+
+.device-app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.5rem 0.65rem;
+}
+
+.device-app-title {
+  font-size: 0.95rem;
+  color: #e8fff4;
+}
+
+.device-app-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(70, 146, 100, 0.35);
+  color: #c9f5de;
+}
+
+.device-chat {
+  background: #f6fbf9;
+  border-radius: 1.35rem 1.35rem 0 0;
+  padding: 0.85rem 0.65rem 4.2rem;
+  min-height: 280px;
+  max-height: 360px;
+  overflow: hidden;
+}
+
+.device-bubble {
+  max-width: 92%;
+  padding: 0.55rem 0.7rem;
+  border-radius: 1rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  margin-bottom: 0.55rem;
+}
+
+.device-bubble--user {
+  margin-left: auto;
+  background: linear-gradient(135deg, var(--aura-primary), var(--aura-accent));
+  color: #f6fffb;
+  border-bottom-right-radius: 0.35rem;
+}
+
+.device-bubble--ai {
+  margin-right: auto;
+  background: #fff;
+  border: 1px solid var(--aura-border);
+  color: var(--aura-text);
+  border-bottom-left-radius: 0.35rem;
+}
+
+.device-bubble-label {
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--aura-primary);
+  margin-bottom: 0.25rem;
+}
+
+.device-input-bar {
+  margin: -3.35rem 0.45rem 0;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.45rem 0.55rem;
+  background: #fff;
+  border-radius: 1.25rem;
+  border: 1px solid var(--aura-border);
+  box-shadow: 0 8px 24px rgba(33, 74, 68, 0.12);
+}
+
+.device-mic {
+  flex-shrink: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(70, 146, 100, 0.15);
+  color: var(--aura-accent);
+  display: grid;
+  place-items: center;
+  cursor: default;
+  padding: 0;
+}
+
+.device-input-fake {
+  flex: 1;
+  font-size: 0.78rem;
+  color: var(--aura-text-muted);
+  padding: 0.15rem 0;
+}
+
+.device-send {
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 50%;
+  background: var(--aura-primary);
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.device-caption {
+  margin: 0.85rem 0 0;
+  font-size: 0.75rem;
+  color: var(--aura-text-muted);
+  text-align: center;
+}
+
+.app-promo__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.app-promo__step {
+  margin: 0;
+  padding: 1rem 1.15rem;
+}
+
+.app-promo__step-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.02rem;
+}
+
+.app-promo__step p {
+  margin: 0;
+  font-size: 0.92rem;
+  color: var(--aura-text-muted);
+  line-height: 1.55;
+}

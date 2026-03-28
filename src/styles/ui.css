@@ -1,0 +1,146 @@
+.page {
+  padding: clamp(1.25rem, 4vw, 3rem) clamp(1rem, 4vw, 2.25rem) 3rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.page-title {
+  font-size: clamp(1.85rem, 4vw, 2.65rem);
+  margin: 0 0 0.35rem;
+}
+
+.page-lead {
+  margin: 0 0 1.5rem;
+  color: var(--aura-text-muted);
+  max-width: 44rem;
+}
+
+.card {
+  background: var(--aura-bg);
+  border: 1px solid var(--aura-border);
+  border-radius: 1.15rem;
+  padding: clamp(1rem, 3vw, 1.45rem);
+  box-shadow: 0 16px 40px rgba(33, 74, 68, 0.06);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.65rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, var(--aura-primary), var(--aura-accent));
+  color: #f6fffb;
+  box-shadow: 0 8px 24px rgba(70, 146, 100, 0.28);
+}
+
+.btn--primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 32px rgba(70, 146, 100, 0.35);
+}
+
+.btn--ghost {
+  background: rgba(70, 146, 100, 0.08);
+  color: var(--aura-accent);
+  border-color: var(--aura-border);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: rgba(70, 146, 100, 0.14);
+}
+
+.field-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--aura-text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.select,
+.textarea,
+.input {
+  width: 100%;
+  border-radius: 0.85rem;
+  border: 1px solid var(--aura-border);
+  background: var(--aura-bg);
+  color: var(--aura-text);
+  font: inherit;
+  padding: 0.62rem 0.85rem;
+}
+
+.textarea {
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.select:focus,
+.textarea:focus,
+.input:focus {
+  outline: none;
+  border-color: var(--aura-primary);
+  box-shadow: 0 0 0 3px rgba(70, 146, 100, 0.2);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.28rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(70, 146, 100, 0.12);
+  color: var(--aura-accent);
+  border: 1px solid var(--aura-border);
+}
+
+.reply-body {
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+.reply-body strong {
+  color: var(--aura-heading);
+  font-weight: 600;
+}
+
+.auth-card .reply-body strong {
+  color: inherit;
+}
+
+.grid-2 {
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 840px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -1,0 +1,75 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-logo__svg {
+  width: 2.35rem;
+  height: 2.35rem;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(70, 146, 100, 0.35));
+}
+
+.brand-logo--sm .brand-logo__svg {
+  width: 1.85rem;
+  height: 1.85rem;
+}
+
+.brand-logo--lg .brand-logo__svg {
+  width: 3.25rem;
+  height: 3.25rem;
+}
+
+.brand-logo__heart {
+  transform-origin: 28px 26px;
+  animation: brand-heart-beat 1.35s ease-in-out infinite;
+}
+
+.brand-logo__pulse {
+  stroke-dasharray: 120;
+  stroke-dashoffset: 120;
+  animation: brand-pulse-draw 1.35s ease-in-out infinite;
+  opacity: 0.9;
+}
+
+.brand-logo__word {
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+  color: var(--aura-accent);
+}
+
+@keyframes brand-heart-beat {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  12% {
+    transform: scale(1.06);
+  }
+  24% {
+    transform: scale(1);
+  }
+  36% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes brand-pulse-draw {
+  0% {
+    stroke-dashoffset: 120;
+    opacity: 0.35;
+  }
+  35% {
+    opacity: 1;
+  }
+  70% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+  100% {
+    stroke-dashoffset: -40;
+    opacity: 0.35;
+  }
+}

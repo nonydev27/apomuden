@@ -1,0 +1,385 @@
+.island-host {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0.85rem clamp(0.75rem, 3vw, 1.25rem) 0;
+}
+
+.island-host--scrolled {
+  padding-top: 0.55rem;
+}
+
+.island-host--scrolled .dynamic-island {
+  box-shadow:
+    0 8px 32px rgba(33, 74, 68, 0.14),
+    0 0 0 1px rgba(255, 255, 255, 0.7) inset;
+}
+
+.dynamic-island {
+  pointer-events: auto;
+  max-width: min(1120px, calc(100vw - 1.5rem));
+  width: 100%;
+  padding: 0.4rem 0.55rem 0.4rem 0.65rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(33, 74, 68, 0.1);
+  box-shadow:
+    0 12px 40px rgba(33, 74, 68, 0.12),
+    0 0 0 1px rgba(255, 255, 255, 0.65) inset;
+  backdrop-filter: blur(20px) saturate(1.2);
+  -webkit-backdrop-filter: blur(20px) saturate(1.2);
+  transition:
+    box-shadow 0.35s ease,
+    transform 0.35s ease,
+    border-color 0.25s ease;
+}
+
+.dynamic-island__row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.5rem;
+  width: 100%;
+}
+
+.dynamic-island--compact {
+  transform: translateY(0);
+}
+
+.island-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  color: var(--aura-accent);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.15rem 0.35rem 0.15rem 0.15rem;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.island-brand:hover {
+  color: var(--aura-primary);
+}
+
+.island-brand-text {
+  line-height: 1;
+}
+
+@media (max-width: 720px) {
+  .island-brand-text {
+    max-width: 7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.island-burger {
+  display: none;
+  margin-left: auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(70, 146, 100, 0.12);
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.island-burger span:not(.sr-only) {
+  display: block;
+  width: 1rem;
+  height: 2px;
+  background: var(--aura-accent);
+  border-radius: 2px;
+  transition:
+    transform 0.25s ease,
+    opacity 0.2s ease;
+}
+
+.island-burger--open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.island-burger--open span:nth-child(2) {
+  opacity: 0;
+}
+
+.island-burger--open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.island-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.2rem;
+  flex: 1;
+  justify-content: center;
+  min-width: 0;
+}
+
+.island-trail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3rem;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.island-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.38rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--aura-text-muted);
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.island-pill:hover {
+  color: var(--aura-accent);
+  background: rgba(70, 146, 100, 0.08);
+}
+
+.island-pill--active {
+  color: var(--aura-accent);
+  border-color: rgba(70, 146, 100, 0.35);
+  background: rgba(70, 146, 100, 0.12);
+}
+
+.island-pill--accent.island-pill--active {
+  background: rgba(70, 146, 100, 0.18);
+}
+
+.island-pill--ghost {
+  border-color: var(--aura-border);
+}
+
+.island-pill--cta {
+  background: linear-gradient(135deg, var(--aura-primary), var(--aura-accent));
+  color: #fff !important;
+  box-shadow: 0 4px 16px rgba(70, 146, 100, 0.3);
+}
+
+.island-pill--cta:hover {
+  filter: brightness(1.05);
+  color: #fff !important;
+}
+
+/* Account avatar + panel */
+.island-account {
+  position: relative;
+}
+
+.island-account-trigger {
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: 50%;
+  border: 2px solid rgba(70, 146, 100, 0.45);
+  background: linear-gradient(145deg, var(--aura-primary), var(--aura-accent));
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(33, 74, 68, 0.22);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.island-account-trigger:hover {
+  transform: scale(1.04);
+  box-shadow: 0 6px 18px rgba(33, 74, 68, 0.28);
+}
+
+.island-account-initials {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.island-account-panel {
+  position: absolute;
+  top: calc(100% + 0.45rem);
+  right: 0;
+  min-width: 15.5rem;
+  max-width: min(18rem, calc(100vw - 2rem));
+  padding: 0.85rem 0.95rem;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--aura-border);
+  border-radius: 1rem;
+  box-shadow: 0 20px 48px rgba(33, 74, 68, 0.16);
+  z-index: 200;
+}
+
+.island-account-label {
+  margin: 0;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--aura-text-muted);
+}
+
+.island-account-email {
+  margin: 0.2rem 0 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--aura-accent);
+  word-break: break-all;
+}
+
+.island-account-divider {
+  height: 1px;
+  margin: 0.65rem 0;
+  background: var(--aura-border);
+}
+
+.island-account-link {
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--aura-primary);
+  text-decoration: none;
+}
+
+.island-account-link:hover {
+  color: var(--aura-accent);
+}
+
+.island-account-hint {
+  margin: 0.5rem 0 0.65rem;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--aura-text-muted);
+}
+
+.island-account-signout {
+  width: 100%;
+  margin: 0;
+  padding: 0.5rem 0.65rem;
+  border-radius: 0.65rem;
+  border: 1px solid rgba(180, 50, 50, 0.35);
+  background: rgba(255, 245, 245, 0.9);
+  color: #b42318;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.island-account-signout:hover {
+  background: rgba(255, 220, 220, 0.95);
+}
+
+.dynamic-island .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 900px) {
+  .dynamic-island {
+    border-radius: 1.35rem;
+    padding: 0.45rem 0.55rem;
+  }
+
+  .dynamic-island__row {
+    flex-wrap: wrap;
+  }
+
+  .island-brand {
+    order: 1;
+  }
+
+  .island-trail {
+    order: 2;
+    margin-left: auto;
+    width: auto;
+    border: none;
+    padding: 0;
+    padding-left: 0.35rem;
+  }
+
+  .island-burger {
+    display: flex;
+    order: 3;
+    margin-left: 0.35rem;
+  }
+
+  .island-nav {
+    display: none;
+    order: 4;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.6rem 0 0.2rem;
+    gap: 0.35rem;
+    justify-content: flex-start;
+    margin-left: 0;
+    border-top: 1px solid rgba(33, 74, 68, 0.08);
+    margin-top: 0.35rem;
+    padding-top: 0.6rem;
+  }
+
+  .dynamic-island--open .island-nav {
+    display: flex;
+  }
+
+  .island-pill {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .island-account-panel {
+    right: 0;
+    left: auto;
+  }
+}
+
+@media (min-width: 901px) {
+  .island-trail:not(:empty) {
+    margin-left: auto;
+    padding-left: 0.55rem;
+    border-left: 1px solid rgba(33, 74, 68, 0.1);
+  }
+
+  .island-nav {
+    margin-right: 0;
+  }
+}
