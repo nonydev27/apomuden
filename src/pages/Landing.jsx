@@ -162,11 +162,7 @@ export function Landing() {
             <span className="how-ai-rail__track" />
             <span className="how-ai-rail__knob" />
           </div>
-          <p className="how-ai-caption">
-            <strong className="how-ai-caption__strong">AI stack</strong>
-            <span className="how-ai-caption__sep">·</span>
-            Speech &amp; text → Khaya → safety-first model → your language
-          </p>
+         
           <h2 className="section-title brand-font capitalize">How It Works</h2>
           <p className="section-intro">
             One smooth pipeline: your language, clinical-safety-first reasoning in
@@ -285,11 +281,11 @@ export function Landing() {
             <div>
               <h4 className="site-footer__heading brand-font">Explore</h4>
               <a href="#top">Home</a>
-              <a href="#how">How it works</a>
+              <a href="#how">How It Works</a>
               <a href="#how-disclaimer">Disclaimer</a>
               <a href="#languages">Languages</a>
-              <a href="#care">Urgent care</a>
-              <Link to="/chat">Mobile app</Link>
+              <a href="#care">Urgent Care</a>
+              <Link to="/chat">Mobile App</Link>
             </div>
             <div>
               <h4 className="site-footer__heading brand-font">Account</h4>
