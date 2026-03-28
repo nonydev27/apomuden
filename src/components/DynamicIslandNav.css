@@ -8,6 +8,17 @@
   justify-content: center;
   pointer-events: none;
   padding: 0.85rem clamp(0.75rem, 3vw, 1.25rem) 0;
+  transition: transform 0.3s ease-out;
+}
+
+.island-host--hidden-mobile {
+  transform: translateY(-100%);
+}
+
+@media (min-width: 721px) {
+  .island-host--hidden-mobile {
+    transform: translateY(0);
+  }
 }
 
 .island-host--scrolled {

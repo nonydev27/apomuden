@@ -7,12 +7,12 @@ import './DynamicIslandNav.css'
 
 const HOME_SECTIONS = [
   { id: 'top', label: 'Home', href: '#top' },
-  { id: 'how', label: 'How it works', href: '#how' },
+  { id: 'how', label: 'How It Works', href: '#how' },
   { id: 'languages', label: 'Languages', href: '#languages' },
-  { id: 'care', label: 'Urgent care', href: '#care' },
+  { id: 'care', label: 'Urgent Care', href: '#care' },
 ]
 
-export function DynamicIslandNav({ activeSection = 'top', scrolled = false }) {
+export function DynamicIslandNav({ activeSection = 'top', scrolled = false, hideOnMobileScroll = false }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
   const isHome = location.pathname === '/'
@@ -28,7 +28,7 @@ export function DynamicIslandNav({ activeSection = 'top', scrolled = false }) {
 
   return (
     <header
-      className={`island-host${scrolled ? ' island-host--scrolled' : ''}${isHome ? ' island-host--home' : ''}`}
+      className={`island-host${scrolled ? ' island-host--scrolled' : ''}${isHome ? ' island-host--home' : ''}${hideOnMobileScroll ? ' island-host--hidden-mobile' : ''}`}
     >
       <div
         className={`dynamic-island${menuOpen ? ' dynamic-island--open' : ''}${scrolled ? ' dynamic-island--compact' : ''}`}
@@ -86,7 +86,7 @@ export function DynamicIslandNav({ activeSection = 'top', scrolled = false }) {
               }
               onClick={() => setMenuOpen(false)}
             >
-              Mobile app
+              Mobile App
             </NavLink>
           </nav>
 

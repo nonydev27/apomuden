@@ -67,7 +67,7 @@ const DISCLAIMER_POINTS = [
   },
 ]
 
-/** Two identical runs for seamless CSS marquee loop. */
+/** Two identical runs for seamless vertical marquee loop. */
 const MARQUEE_ITEMS = [
   ...GHANA_LANGUAGES_SHOWCASE,
   ...GHANA_LANGUAGES_SHOWCASE,
@@ -221,7 +221,7 @@ export function Landing() {
           <div
             className="lang-marquee"
             role="region"
-            aria-label="Scrolling list of supported and celebrated languages"
+            aria-label="Scrolling grid of supported and celebrated languages"
           >
             <div className="lang-marquee__track">
               {MARQUEE_ITEMS.map((L, i) => (
@@ -248,10 +248,10 @@ export function Landing() {
             heavy bleeding, or anything that feels immediately life-threatening.
           </p>
           <ul className="care-list">
-            <li>Trouble breathing, choking, or blue lips</li>
-            <li>New confusion, fainting, or worst headache of your life</li>
-            <li>Possible stroke: face droop, arm weakness, speech trouble</li>
-            <li>Severe pain, trauma, or pregnancy bleeding with pain</li>
+            <li className="care-item" data-tooltip="This includes gasping for air or a visible blue/gray tint around mouth or fingernails. Signs of hypoxia (critically low oxygen) — call 911 immediately.">Trouble breathing, choking, or blue lips</li>
+            <li className="care-item" data-tooltip="Sudden 'thunderclap' headache can indicate brain bleed. Sudden confusion or fainting signals lack of blood flow to brain — call 911 immediately.">New confusion, fainting, or worst headache of your life</li>
+            <li className="care-item" data-tooltip="Stroke symptoms are sudden and one-sided. Check: face droop, arm weakness, slurred speech. Every minute matters for brain tissue survival — call 911 now.">Possible stroke: face droop, arm weakness, speech trouble</li>
+            <li className="care-item" data-tooltip="Deep lacerations, suspected broken bones, or intense pain need immediate care. Pregnancy bleeding with cramping could indicate placental issues — call 911.">Severe pain, trauma, or pregnancy bleeding with pain</li>
           </ul>
           <p className="care-foot">
             See our{' '}

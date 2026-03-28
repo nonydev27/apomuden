@@ -31,3 +31,53 @@
 .footer--compact a {
   font-weight: 600;
 }
+
+/* Scroll to top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgb(70, 146, 100), rgb(33, 74, 68));
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 50;
+  box-shadow: 0 8px 24px rgba(33, 74, 68, 0.25);
+  transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: slideUpIn 0.4s ease-out;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(33, 74, 68, 0.35);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+@keyframes slideUpIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 720px) {
+  .scroll-to-top {
+    bottom: 1.5rem;
+    right: 1rem;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+}
