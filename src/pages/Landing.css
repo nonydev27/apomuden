@@ -1096,3 +1096,319 @@
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.45);
 }
+
+/* ━━━━━━━━━━━━━━━ SECTION ANIMATIONS ━━━━━━━━━━━━━━━ */
+
+/* Hero Section Animations */
+.hero-section {
+  animation: section-fade-in 0.8s ease-out;
+}
+
+.hero-copy {
+  animation: slide-up-fade 0.8s ease-out 0.1s backwards;
+}
+
+.landing-eyebrow {
+  animation: slide-up-fade 0.8s ease-out 0.15s backwards;
+}
+
+.hero-title {
+  animation: slide-up-fade 0.8s ease-out 0.25s backwards;
+}
+
+.hero-lead {
+  animation: slide-up-fade 0.8s ease-out 0.35s backwards;
+}
+
+.landing-cta {
+  animation: slide-up-fade 0.8s ease-out 0.45s backwards;
+}
+
+.hero-collage {
+  animation: slide-left-fade 0.9s ease-out 0.3s backwards;
+}
+
+.hero-fig {
+  animation: scale-fade-in 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+}
+
+.hero-fig--1 {
+  animation-delay: 0.4s;
+}
+
+.hero-fig--2 {
+  animation-delay: 0.5s;
+}
+
+.hero-fig--3 {
+  animation-delay: 0.6s;
+}
+
+/* How It Works Section */
+.section-how {
+  animation: section-fade-in 0.8s ease-out;
+}
+
+.how-ai-rail {
+  animation: slide-right-fade 0.8s ease-out 0.1s backwards;
+}
+
+.section-how .section-title {
+  animation: slide-up-fade 0.8s ease-out 0.2s backwards;
+}
+
+.section-how .section-intro {
+  animation: slide-up-fade 0.8s ease-out 0.3s backwards;
+}
+
+.flow-card {
+  animation: slide-up-fade 0.7s ease-out backwards;
+}
+
+.flow-card:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.flow-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.flow-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.flow-card:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+.how-disclaimer {
+  animation: slide-up-fade 0.8s ease-out 0.8s backwards;
+  border-color: rgba(70, 146, 100, 0.2);
+  transition: all 0.3s ease;
+}
+
+.how-disclaimer:hover {
+  border-color: rgba(70, 146, 100, 0.4);
+  background: rgba(70, 146, 100, 0.09);
+}
+
+/* Languages Section */
+.section-lang {
+  animation: section-fade-in 0.8s ease-out;
+}
+
+.section-lang .section-title {
+  animation: slide-up-fade 0.8s ease-out 0.1s backwards;
+}
+
+.section-lang .section-intro {
+  animation: slide-up-fade 0.8s ease-out 0.2s backwards;
+}
+
+.lang-marquee {
+  animation: fade-in 0.8s ease-out 0.3s backwards;
+}
+
+.lang-card--marquee {
+  animation: scale-fade-in 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Care Section */
+.section-care {
+  animation: section-fade-in 0.8s ease-out;
+}
+
+.section-care-inner {
+  animation: slide-up-fade 0.8s ease-out 0.1s backwards;
+}
+
+.section-care .section-title {
+  animation: slide-up-fade 0.8s ease-out 0.2s backwards;
+}
+
+.section-care .section-intro {
+  animation: slide-up-fade 0.8s ease-out 0.3s backwards;
+}
+
+.care-item {
+  animation: slide-left-fade 0.6s ease-out backwards;
+  position: relative;
+}
+
+.care-item:nth-child(1) {
+  animation-delay: 0.4s;
+}
+
+.care-item:nth-child(2) {
+  animation-delay: 0.5s;
+}
+
+.care-item:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.care-item:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+/* Footer */
+.site-footer {
+  animation: section-fade-in 0.8s ease-out;
+}
+
+.site-footer__brand {
+  animation: slide-up-fade 0.8s ease-out 0.1s backwards;
+}
+
+.site-footer__cols {
+  animation: slide-up-fade 0.8s ease-out 0.2s backwards;
+}
+
+.site-footer__langs {
+  animation: slide-up-fade 0.8s ease-out 0.3s backwards;
+}
+
+.site-footer__pill {
+  animation: scale-fade-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+  transition: all 0.3s ease;
+}
+
+.site-footer__pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.site-footer__copy {
+  animation: fade-in 0.8s ease-out 0.4s backwards;
+}
+
+/* ━━━━━━━━━━━━━━━ KEYFRAME DEFINITIONS ━━━━━━━━━━━━━━━ */
+
+@keyframes section-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-left-fade {
+  from {
+    opacity: 0;
+    transform: translateX(2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right-fade {
+  from {
+    opacity: 0;
+    transform: translateX(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(70, 146, 100, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(70, 146, 100, 0);
+  }
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  .hero-section,
+  .hero-copy,
+  .landing-eyebrow,
+  .hero-title,
+  .hero-lead,
+  .landing-cta,
+  .hero-collage,
+  .hero-fig,
+  .section-how,
+  .how-ai-rail,
+  .section-how .section-title,
+  .section-how .section-intro,
+  .flow-card,
+  .how-disclaimer,
+  .section-lang,
+  .section-lang .section-title,
+  .section-lang .section-intro,
+  .lang-marquee,
+  .lang-card--marquee,
+  .section-care,
+  .section-care-inner,
+  .section-care .section-title,
+  .section-care .section-intro,
+  .care-item,
+  .site-footer,
+  .site-footer__brand,
+  .site-footer__cols,
+  .site-footer__langs,
+  .site-footer__pill,
+  .site-footer__copy {
+    animation: none !important;
+    transform: none !important;
+  }
+
+  .how-disclaimer:hover {
+    transform: none;
+  }
+
+  .site-footer__pill:hover {
+    transform: none;
+  }
+}
